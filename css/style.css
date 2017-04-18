@@ -402,3 +402,11 @@ template {
 [hidden] {
   display: none;
 }
+.visually-hidden {
+  display: none;
+}
+body {
+  color: #F0F0F0;
+  background: #555555;
+}
+/*# sourceMappingURL=style.css.map */
