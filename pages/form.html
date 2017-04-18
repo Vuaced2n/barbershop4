@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Барбершоп Бородинский Адаптивный</title>
+</head>
+<body class="body">
+  <header class="page-header">
+    <div class="page-header__logo">
+      <img src="img/logotype-mobile.png" alt="Барбершоп Бородинский"  width="226" height="30">
+    </div>
+    <nav class="main-nav">
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__items">
+          <li class="main-nav__item"><a href="#">Главная</a></li>
+          <li class="main-nav__item"><a href="#">Наши работы</a></li>
+          <li class="main-nav__item"><a class="main-nav__item  main-nav__item--active">Записаться</a></li>
+          <li class="main-nav__item"><a href="#">Контакты</a></li> 
+          <li class="main-nav__item"><a href="#">HTML Academy</a></li>
+        </ul>
+        <ul class="main-nav__user-items">
+          <li class="main-nav__user-item"><a class="main-nav__login" href="#">Вход</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <h1 class="form__title">Запись на стрижку</h1>
+    <a class="bread-crumbs" href="../index.html">На главную</a>
+    <form method="post" name="recording-for-haircut">
+      <input class="form__text  form__text--surname" type="text" name="surname" id="surname" placeholder="Фамилия">
+      <input class="form__text  form__text--name" type="text" name="name" id="name" placeholder="Имя">
+      <input class="form__text  form__text--patronymic" type="text" name="name" id="name" placeholder="Очество">
+      <input class="form__text  form__text--tel" type="tel" name="tel" id="tel" placeholder="Контактный телефон">
+      <input class="form__text  form__text--email" type="email" name="email" id="email" placeholder="Контактный e-mail">
+      <textarea class="form__text" placeholder="Доп. информация для мастера"></textarea>
+      <fieldset>
+        <legend>Выберите модель бороды</legend>
+        <input class="form__inpute--hidden" type="radio" name="beard-model" id="beard-model-1" checked>
+        <input class="form__inpute--hidden" type="radio" name="beard-model" id="beard-model-2">
+        <input class="form__inpute--hidden" type="radio" name="beard-model" id="beard-model-3">
+        <input class="form__inpute--hidden" type="radio" name="beard-model" id="beard-model-4">
+        <input class="form__inpute--hidden" type="radio" name="beard-model" id="beard-model-5">
+
+        <label for="beard-model-1">адмирал</label>
+        <label for="beard-model-2">лесоруб</label>
+        <label for="beard-model-3">полярник</label>
+        <label for="beard-model-4">боярин</label>
+        <label for="beard-model-5">мудрец</label>
+      </fieldset>
+      <fieldset>
+        <legend>Дополнительные услуги</legend>
+        <input class="form__inpute--hidden" type="checkbox" name="to-paint-beard" id="to-paint-beard" checked>
+        <input class="form__inpute--hidden" type="checkbox" name="screw-mustache" id="screw-mustache" checked>
+        <input class="form__inpute--hidden" type="checkbox" name="combing-beard" id="combing-beard">
+        <input class="form__inpute--hidden" type="checkbox" name="flatten-hair" id="flatten-hair">
+        <input class="form__inpute--hidden" type="checkbox" name="remove-gray-hair" id="remove-gray-hair">
+        <input class="form__inpute--hidden" type="checkbox" name="polish-the-bald" id="polish-the-bald">
+
+        <label for="to-paint-beard">Подкрасить бороду</label>
+        <label for="screw-mustache">Накрутить усы</label>
+        <label for="combing-beard">Причесать бороду</label>
+        <label for="flatten-hair">Подровнять виски</label>
+        <label for="remove-gray-hair">Убрать седину</label>
+        <label for="polish-the-bald">Отполировать лысину</label>
+      </fieldset>
+      <button class="form__submit  btn" type="submit">Отправить заявку</button>
+    </form>
+  </main>
+  <footer class="page-footer">
+    <div class="address">
+      <span class="contacts__title">Барбершоп «Бородинский»</span>
+      <p class="contacts__address">г. Санкт-Петербург, ул. Большая Конюшенная 19/8</p>
+      <a class="contacts__tel" href="tel:+79992223311"><span class="contacts__tel--hidden">Тел.:</span> +7 (999) 222-33-11</a>
+    </div>
+    <div class="social">
+      <span class="social__title">Давайте дружить!</span>
+      <div class="social__links">
+        <a class="social__link  social__link--vk" href="#">Вконтакте</a>
+        <a class="social__link  social__link--fb" href="#">Фейсбук</a>
+        <a class="social__link  social__link--inst" href="#">Инстаграм</a>
+      </div>
+    </div>
+    <div class="copyright">
+      <span class="copyright__title">Разработано:</span>
+      <a class="copyright__link" href="#">HTML Academy</a>
+    </div>
+  </footer>
+</body>
+</html>
