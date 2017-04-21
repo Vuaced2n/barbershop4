@@ -403,7 +403,14 @@ template {
   display: none;
 }
 .visually-hidden {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 body {
   color: #FFF;
@@ -454,6 +461,11 @@ a {
 @media (min-width: 768px) {
   .main-nav {
     background: #000000;
+  }
+}
+@media (min-width: 1200px) {
+  .main-nav {
+    background: #ff0055;
   }
 }
 /*# sourceMappingURL=style.css.map */

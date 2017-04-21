@@ -24,10 +24,14 @@
     a {
     }
   }
-}
 
-@media (min-width: 768px) {
-  .main-nav {
-    background: #000000;
-  }
+
+  @media @tabled-width {
+      background: #000000;
+    }
+
+  @media @deckstop-width {
+      background: #ff0055;
+    }
+  
 }
