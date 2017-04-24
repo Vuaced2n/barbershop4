@@ -446,17 +446,104 @@ a {
   text-align: center;
 }
 .main-nav {
+  position: relative;
   background: #816550;
 }
-.main-nav__items {
+.main-nav .main-nav__items {
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+  list-style: none;
+}
+.main-nav .main-nav__item a {
+  display: block;
+  padding: 12px 21px;
+  border-top: 1px solid #9a7960;
+  border-bottom: 1px solid #685140;
+  font-size: 18px;
+  line-height: 1.4;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.main-nav .main-nav__item a[href]:hover {
+  background: #685140;
+}
+.main-nav .main-nav__user-items {
   padding: 0;
   margin: 0;
   list-style: none;
 }
-.main-nav__user-items {
-  padding: 0;
-  margin: 0;
-  list-style: none;
+.main-nav .main-nav__login {
+  display: block;
+  padding: 12px 21px;
+  padding-left: 49px;
+  border-top: 1px solid #9a7960;
+  border-bottom: 1px solid #685140;
+  font-size: 18px;
+  line-height: 1.4;
+  color: #ffffff;
+}
+.main-nav .main-nav__login[href]:hover {
+  background: #685140;
+}
+.main-nav .main-nav__toggle {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 70px;
+  height: 50px;
+  font-size: 0;
+  border: none;
+  cursor: pointer;
+  background: #685140;
+}
+.main-nav .main-nav__toggle:hover {
+  background: #584537;
+}
+.main-nav .main-nav__toggle:active::before,
+.main-nav .main-nav__toggle:active::after {
+  opacity: 0.5;
+}
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 17px;
+  width: 36px;
+  height: 2px;
+  background: #fff;
+  box-shadow: 0 8px 0 0 #fff,
+                  0 16px 0 0 #fff;
+}
+.main-nav--opened .main-nav__toggle {
+  top: 0;
+  left: 0;
+}
+.main-nav--opened .main-nav__toggle::before,
+.main-nav--opened .main-nav__toggle::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -18px;
+  width: 36px;
+  height: 2px;
+  background: #fff;
+}
+.main-nav--opened .main-nav__toggle::before {
+  transform: rotate(45deg);
+}
+.main-nav--opened .main-nav__toggle::after {
+  transform: rotate(-45deg);
+}
+@media (max-width: 767px) {
+  .main-nav--closed .main-nav__item,
+  .main-nav--closed .main-nav__user-items {
+    display: none;
+  }
+  .main-nav--closed .main-nav--active {
+    display: block;
+  }
 }
 @media (min-width: 768px) {
   .main-nav {
@@ -465,7 +552,7 @@ a {
 }
 @media (min-width: 1200px) {
   .main-nav {
-    background: #ff0055;
+    background: #555555;
   }
 }
 /*# sourceMappingURL=style.css.map */
