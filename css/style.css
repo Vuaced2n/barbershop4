@@ -414,7 +414,8 @@ template {
 }
 body {
   color: #FFF;
-  background: #242424;
+  background: #000000;
+  font-family: "PT Sans Narrow", sans-serif;
 }
 * {
   box-sizing: border-box;
@@ -439,20 +440,31 @@ a {
   }
 }
 .page-header {
-  background: #242424;
+  display: flex;
+  flex-direction: column;
 }
-.page-header__logo {
+.page-header .page-header__logo {
   padding: 20px 0;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .page-header {
+    flex-direction: column-reverse;
+  }
+  .page-header__logo {
+    min-height: 400px;
+  }
+}
 .main-nav {
   position: relative;
+}
+.main-nav .main-nav__wrapper {
   background: #816550;
 }
 .main-nav .main-nav__items {
   padding: 0;
   margin: 0;
-  font-weight: bold;
+  font-weight: 700;
   list-style: none;
 }
 .main-nav .main-nav__item a {
@@ -474,6 +486,7 @@ a {
   list-style: none;
 }
 .main-nav .main-nav__login {
+  position: relative;
   display: block;
   padding: 12px 21px;
   padding-left: 49px;
@@ -486,57 +499,46 @@ a {
 .main-nav .main-nav__login[href]:hover {
   background: #685140;
 }
-.main-nav .main-nav__toggle {
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 70px;
-  height: 50px;
-  font-size: 0;
-  border: none;
-  cursor: pointer;
-  background: #685140;
-}
-.main-nav .main-nav__toggle:hover {
-  background: #584537;
-}
-.main-nav .main-nav__toggle:active::before,
-.main-nav .main-nav__toggle:active::after {
-  opacity: 0.5;
-}
-.main-nav--closed .main-nav__toggle::before {
-  content: "";
-  position: absolute;
-  top: 15px;
-  left: 17px;
-  width: 36px;
-  height: 2px;
-  background: #fff;
-  box-shadow: 0 8px 0 0 #fff,
-                  0 16px 0 0 #fff;
-}
-.main-nav--opened .main-nav__toggle {
-  top: 0;
-  left: 0;
-}
-.main-nav--opened .main-nav__toggle::before,
-.main-nav--opened .main-nav__toggle::after {
+.main-nav .main-nav__login::before {
   content: "";
   position: absolute;
   top: 50%;
-  left: 50%;
-  margin-left: -18px;
-  width: 36px;
-  height: 2px;
-  background: #fff;
-}
-.main-nav--opened .main-nav__toggle::before {
-  transform: rotate(45deg);
-}
-.main-nav--opened .main-nav__toggle::after {
-  transform: rotate(-45deg);
+  left: 20px;
+  margin-top: -8px;
+  width: 16px;
+  height: 16px;
+  background: #eeeeee;
 }
 @media (max-width: 767px) {
+  .main-nav .main-nav__toggle {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 70px;
+    height: 50px;
+    font-size: 0;
+    border: none;
+    cursor: pointer;
+    background: #685140;
+  }
+  .main-nav .main-nav__toggle:hover {
+    background: #584537;
+  }
+  .main-nav .main-nav__toggle:active::before,
+  .main-nav .main-nav__toggle:active::after {
+    opacity: 0.5;
+  }
+  .main-nav--closed .main-nav__toggle::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 17px;
+    width: 36px;
+    height: 2px;
+    background: #fff;
+    box-shadow: 0 8px 0 0 #fff,
+                    0 16px 0 0 #fff;
+  }
   .main-nav--closed .main-nav__item,
   .main-nav--closed .main-nav__user-items {
     display: none;
@@ -544,15 +546,73 @@ a {
   .main-nav--closed .main-nav--active {
     display: block;
   }
+  .main-nav--closed .main-nav__wrapper {
+    margin-left: 0;
+  }
+  .main-nav--opened .main-nav__toggle {
+    top: 0;
+    left: 0;
+  }
+  .main-nav--opened .main-nav__toggle::before,
+  .main-nav--opened .main-nav__toggle::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -18px;
+    width: 36px;
+    height: 2px;
+    background: #fff;
+  }
+  .main-nav--opened .main-nav__toggle::before {
+    transform: rotate(45deg);
+  }
+  .main-nav--opened .main-nav__toggle::after {
+    transform: rotate(-45deg);
+  }
+  .main-nav--opened .main-nav__wrapper {
+    margin-left: 70px;
+  }
 }
 @media (min-width: 768px) {
-  .main-nav {
+  .main-nav .main-nav__wrapper {
+    display: flex;
     background: #000000;
+  }
+  .main-nav .main-nav__items {
+    display: flex;
+    font-weight: 400;
+  }
+  .main-nav .main-nav__item a {
+    border: none;
+  }
+  .main-nav .main-nav__user-items a {
+    border: none;
+  }
+  .main-nav .main-nav__login {
+    min-height: 49px;
+    font-size: 0;
+  }
+  .main-nav .main-nav__toggle {
+    display: none;
+  }
+  .main-nav--active {
+    position: relative;
+  }
+  .main-nav--active::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    right: 20px;
+    left: 20px;
+    height: 3px;
+    background: #806552;
   }
 }
 @media (min-width: 1200px) {
-  .main-nav {
-    background: #555555;
+  .main-nav .main-nav__login {
+    text-transform: uppercase;
+    font-size: 18px;
   }
 }
 /*# sourceMappingURL=style.css.map */
