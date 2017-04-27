@@ -1,8 +1,9 @@
 .page-header {
   display: flex;
   flex-direction: column;
+  background: url(../img/body-bg.jpg) no-repeat;
 
-  .page-header__logo {    
+  &__logo {    
     padding: 20px 0;
     text-align: center;
   }
@@ -12,10 +13,9 @@
 @media @tabled-width {
   .page-header {
     flex-direction: column-reverse;
-  }
 
-
-  .page-header__logo {
-    min-height: 400px;
+    &__logo {
+      min-height: 400px;
+    }
   }
 }

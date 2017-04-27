@@ -3,12 +3,12 @@
 .main-nav {
   position: relative;
   
-  .main-nav__wrapper {
+  &__wrapper {
     background: @mobile-color-nav;
   }
 
 
-  .main-nav__items {
+  &__items {
     padding: 0;
     margin: 0;
     font-weight: 700;
@@ -16,10 +16,10 @@
   }
 
 
-  .main-nav__item {
+  &__item {
     a {
       display: block;
-      padding: 12px 21px;
+      padding: 12px 0;
       border-top: 1px solid lighten(@mobile-color-nav, 8%);
       border-bottom: 1px solid darken(@mobile-color-nav, 8%);
       font-size: 18px;
@@ -27,7 +27,6 @@
       color: #ffffff;
       text-transform: uppercase;
 
-      
       &[href]:hover {
       background: darken(@mobile-color-nav, 8%)
       }
@@ -35,14 +34,14 @@
   }
 
 
-  .main-nav__user-items {
+  &__user-items {
     padding: 0;
     margin: 0;
     list-style: none;
   }
 
 
-  .main-nav__login {
+  &__login {
     position: relative;
     display: block;
     padding: 12px 21px;
@@ -73,8 +72,15 @@
 
 @media @mobile-width {
   .main-nav {
+    
+    &__item {
+      a {
+        padding-left: 21px;
+      }
+    }
 
-    .main-nav__toggle {
+
+    &__toggle {
       position: absolute;
       right: 0;
       top: 0;
@@ -117,7 +123,8 @@
 
 
       .main-nav--active {
-        display: block;
+        display: block;        
+        text-align: center;
       }
 
 
@@ -163,40 +170,44 @@
 
 @media @tabled-width {
   .main-nav {
+    background: #000000;
 
-    .main-nav__wrapper {
+    &__wrapper {
       display: flex;
-      background: #000000;
+      width: 85%;
+      margin: 0 auto;
+      background: #000000
     }
 
 
-    .main-nav__items {
+    &__items {
       display: flex;
       font-weight: 400;
     }
 
 
-    .main-nav__item {
+    &__item {
+      a {
+        padding: 12px 15px;
+        border: none;
+      }
+    }
+
+
+    &__user-items {
       a {
         border: none;
       }
     }
 
 
-    .main-nav__user-items {
-      a {
-        border: none;
-      }
-    }
-
-
-    .main-nav__login {
+    &__login {
       min-height: 49px;
       font-size: 0;
     }
 
 
-    .main-nav__toggle {
+    &__toggle {
       display: none;
     }
 
@@ -217,10 +228,17 @@
 }
 
 
-@media @deckstop-width {
+@media @desktop-width {
   .main-nav {
 
-    .main-nav__login {
+    &__item {
+      a {
+        padding: 12px 21px;
+      }
+    }
+
+
+    &__login {
       text-transform: uppercase;
       font-size: 18px;
     }
