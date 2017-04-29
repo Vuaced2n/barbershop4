@@ -219,7 +219,8 @@ a {
 .page-header {
   display: flex;
   flex-direction: column;
-  background: url(../img/body-bg.jpg) no-repeat;
+  background: url(../img/body-bg.jpg) no-repeat 0 -70px;
+  background-size: cover;
 }
 .page-header__logo {
   padding: 20px 0;
@@ -231,6 +232,11 @@ a {
   }
   .page-header__logo {
     min-height: 400px;
+  }
+}
+@media (min-width: 1200px) {
+  .page-header__logo {
+    min-height: 650px;
   }
 }
 .main-nav {
@@ -463,6 +469,7 @@ a {
   }
   .stats__header {
     position: relative;
+    min-height: 187px;
     margin-top: -187px;
     display: flex;
     flex-wrap: wrap;
