@@ -63,32 +63,38 @@
       </div>      
     </section>
     <section class="advantages">
-      <div class="advantages__wrapper  slider">
+      <div class="advantages__wrapper">
         <h2 class="advantages__title  visually-hidden">Наши преимущества</h2>
-        <input class="slider__input" type="radio" id="advantages-input-1" name="advantages" checked>
-        <input class="slider__input" type="radio" id="advantages-input-2" name="advantages">
-        <input class="slider__input" type="radio" id="advantages-input-3" name="advantages">
+        <input type="radio" id="advantages-input-1" name="advantages" checked>
+        <input type="radio" id="advantages-input-2" name="advantages">
+        <input type="radio" id="advantages-input-3" name="advantages">
         <ul class="advantages__items">
           <li class="advantages__item">
-            <img src="img/advantage-1-illustration.png" alt="Быстро">
-            <h3 class="advantages__title">Быстро</h3>
-            <p class="advantages__body">Мы делаем свою работу быстро! Два часа пролетят незаметно и Вы – счастливый обладатель стильной стрижки-минутки.</p>
+            <img class="advantages__img" src="img/advantage-1-illustration.png" alt="Быстро">
+            <div class="advantages__body">
+              <h3 class="advantages__title">Быстро</h3>
+              <p>Мы делаем свою работу быстро! Два часа пролетят незаметно и Вы – счастливый обладатель стильной стрижки-минутки.</p>
+            </div>
           </li>
           <li class="advantages__item">
-            <img src="img/advantage-2-illustration.png" alt="Круто">
-            <h3 class="advantages__title">Круто</h3>
-            <p class="advantages__body">Забудьте, как вы стриглись раньше. Мы сделаем из вас звезду футбола или кино. Во всяком случае внешне.</p>
+            <img class="advantages__img" src="img/advantage-2-illustration.png" alt="Круто">
+            <div class="advantages__body">
+              <h3 class="advantages__title">Круто</h3>
+              <p>Забудьте, как вы стриглись раньше. Мы сделаем из вас звезду футбола или кино. Во всяком случае внешне.</p>
+            </div>
           </li>
           <li class="advantages__item">
-            <img src="img/advantage-3-illustration.png" alt="Дорого">
-            <h3 class="advantages__title">Дорого</h3>
-            <p class="advantages__body">Наши мастера – профессионалы своего дела не могут стоить дёшево. К тому же, разве не цена даёт определённый статус?</p>
-          </li>
+            <img class="advantages__img" src="img/advantage-3-illustration.png" alt="Дорого">
+            <div class="advantages__body">
+              <h3 class="advantages__title">Дорого</h3>
+              <p>Наши мастера – профессионалы своего дела не могут стоить дёшево. К тому же, разве не цена даёт определённый статус?</p>
+            </div>
+          </li>          
         </ul>
         <div class="advantages__toggles">
-          <label class="slider__toggles" for="advantages-input-1"></label>
-          <label class="slider__toggles" for="advantages-input-2"></label>
-          <label class="slider__toggles" for="advantages-input-3"></label>
+          <label class="advantages__toggle" for="advantages-input-1"></label>
+          <label class="advantages__toggle" for="advantages-input-2"></label>
+          <label class="advantages__toggle" for="advantages-input-3"></label>
         </div>
       </div>
     </section>
@@ -113,7 +119,7 @@
       </div>
     </section>
     <section class="reviews">
-      <div class="reviews__wrapper  slider  ">
+      <div class="reviews__wrapper  slider">
         <h2 class="reviews__title">Отзывы о нас</h2>
         <a class="reviews__write  btn" href="#">Оставить свой</a>
         <input type="radio" name="reviews" id="reviews-input-1" checked>
