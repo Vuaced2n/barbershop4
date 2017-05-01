@@ -1,4 +1,149 @@
 .news {
   color: #000000;
-  background: #F9F5F2;
+  background: @content-color-bg;
+  // position: relative;
+    
+  //   &::before {
+  //     content: "";
+  //     width: 0;
+  //     position: absolute;
+  //     border: 50vw solid transparent;
+  //     border-top: 20px solid @base-color-bg;
+  //   }
+  
+  &__wrapper {
+    padding: 20px;
+    border-bottom: 1px solid #E4DDD7;
+  }
+
+
+  &__title {
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+
+  &__items {
+    padding: 0;
+    list-style: none;
+  }
+
+
+  &__item {
+    display: flex;
+    position: relative;
+    min-height: 70px;
+    padding: 15px 0;
+    margin-left: 70px;
+
+    
+    &:first-child {
+      border-bottom: 1px solid #E4DDD7;
+    }
+
+
+    &:last-child {
+      display: none;
+    }
+
+
+    p {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.5;
+      margin: 0;
+    }
+  }
+
+
+  &__date {
+    position: absolute;
+    display: block;
+    left: -70px;
+    top: 45px;
+    margin-top: -25px;
+    padding-top: 4px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 1;
+    color: #FFFFFF;
+    background: #000000;
+
+    &::after {
+      content: "";
+      bottom: -35px;
+      left: 0;
+      width: 0;
+      position: absolute;
+      border: 25px solid transparent;
+      border-top: 10px solid #000000;
+    }
+
+    b {
+      font-size: 30px;
+      line-height: 1;
+    }
+
+
+  }
+}
+
+
+@media @tabled-width {
+  .news {
+    &__wrapper {
+      position: relative;
+      width: 85%;
+      margin: 0 auto;
+      padding: 20px 0;
+    }
+
+
+    &__title {
+      text-align: left;
+      font-size: 40px;
+    }
+
+
+    &__items {
+      display: flex;
+    }
+
+
+    &__item {
+      padding-right: 30px;
+
+      &:first-child {
+        border-bottom: none;
+      }
+    }
+
+
+    &__to-all {
+      position: absolute;
+      top: 55px;
+      right: 0;
+    }
+  }
+}
+
+
+@media @desktop-width {
+  .news {
+    
+    &__title {
+      margin-left: 70px;
+    }
+
+
+    &__item {
+      padding-right: 30px;
+
+      &:last-child {
+        display: block;
+      }
+    }
+  }
 }
