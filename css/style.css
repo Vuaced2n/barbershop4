@@ -291,7 +291,7 @@ a {
   margin-top: -8px;
   width: 16px;
   height: 16px;
-  background: #eeeeee;
+  background: url(../img/login.png) no-repeat;
 }
 @media (max-width: 767px) {
   .main-nav__item a {
