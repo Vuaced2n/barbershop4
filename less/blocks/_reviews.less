@@ -1,4 +1,77 @@
 .reviews {
   background: @content-color-bg;
   color: #000000;
+
+  &__wrapper{
+  	.container();
+  	padding: 40px 0;
+  }
+
+
+  &__autor-foto {
+    width: 50px;
+    height: 50px;
+  }
+  
+
+  &__title {
+    margin-top: 0;
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+
+  &__toggles {
+    display: flex;
+    justify-content: center;
+  }
+
+
+  input {
+      display: none;
+  }
+}
+
+
+
+@media @mobile-width {
+  .reviews {
+    &__write {
+      display: none;
+    }
+
+    // СЛАЙДЕР
+    &__toggle {
+      width: 25px;
+      height: 25px;
+      margin: 0 7%;
+      border: 1px solid #000000;
+      transform: rotate(45deg);
+      cursor: pointer;
+
+      &:hover {
+        border-color: #826550;
+      }
+    }
+
+
+    &__item {
+      display: none;
+    }
+
+
+    input[type="radio"]:nth-of-type(1):checked ~ &__toggles &__toggle:nth-of-type(1),
+    input[type="radio"]:nth-of-type(2):checked ~ &__toggles &__toggle:nth-of-type(2),
+    input[type="radio"]:nth-of-type(3):checked ~ &__toggles &__toggle:nth-of-type(3) {
+      background: @base-color-bg;
+    }
+
+
+    input[type="radio"]:nth-of-type(1):checked ~ &__items &__item:nth-of-type(1),
+    input[type="radio"]:nth-of-type(2):checked ~ &__items &__item:nth-of-type(2),
+    input[type="radio"]:nth-of-type(3):checked ~ &__items &__item:nth-of-type(3) {
+      display: block;
+    }
+  }
 }

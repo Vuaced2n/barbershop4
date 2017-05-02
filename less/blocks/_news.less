@@ -12,12 +12,14 @@
   //   }
   
   &__wrapper {
-    padding: 20px;
+    .container();
+    padding: 40px 0;
     border-bottom: 1px solid #E4DDD7;
   }
 
 
   &__title {
+    margin-top: 0;
     font-size: 30px;
     text-align: center;
     text-transform: uppercase;
@@ -94,10 +96,8 @@
 @media @tabled-width {
   .news {
     &__wrapper {
+      padding: 60px 0;
       position: relative;
-      width: 85%;
-      margin: 0 auto;
-      padding: 20px 0;
     }
 
 
