@@ -216,18 +216,19 @@ a {
   color: #ffffff;
   text-decoration: none;
 }
+img {
+  width: 100%;
+  height: auto;
+}
 .btn {
   display: block;
-  padding: 10px 30px;
-  border: 1px solid #E4DDD7;
+  padding: 10px 20px;
+  border: 1px solid #e5ddd5;
   text-align: center;
   text-transform: uppercase;
   font-size: 20px;
   font-weight: 700;
   color: #000000;
-}
-.btn--width158 {
-  width: 158;
 }
 .page-header {
   display: flex;
@@ -708,7 +709,7 @@ a {
   width: 85%;
   margin: 0 auto;
   padding: 40px 0;
-  border-bottom: 1px solid #E4DDD7;
+  border-bottom: 1px solid #e5ddd5;
 }
 .news__title {
   margin-top: 0;
@@ -735,7 +736,6 @@ a {
 }
 .news__item p {
   font-size: 18px;
-  font-weight: 700;
   line-height: 1.5;
   margin: 0;
 }
@@ -786,7 +786,7 @@ a {
   }
   .news__to-all {
     position: absolute;
-    top: 55px;
+    top: 60px;
     right: 0;
   }
 }
@@ -810,9 +810,43 @@ a {
   margin: 0 auto;
   padding: 40px 0;
 }
+.reviews__write {
+  display: none;
+}
+.reviews__item {
+  display: flex;
+  position: relative;
+  min-height: 70px;
+  padding: 15px 0;
+  margin-left: 70px;
+}
 .reviews__autor-foto {
+  position: absolute;
+  left: -70px;
+  top: 20px;
   width: 50px;
   height: 50px;
+  border: 1px solid #eae3dc;
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.reviews__item:nth-child(1) .reviews__autor-foto {
+  background-image: url(../img/travis.jpg);
+}
+.reviews__item:nth-child(2) .reviews__autor-foto {
+  background-image: url(../img/travis.jpg);
+}
+.reviews__item:nth-child(3) .reviews__autor-foto {
+  background-image: url(../img/travis.jpg);
+}
+.reviews__autor-name {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+}
+.reviews__quote {
+  font-size: 18px;
 }
 .reviews__title {
   margin-top: 0;
@@ -827,33 +861,90 @@ a {
 .reviews input {
   display: none;
 }
-@media (max-width: 767px) {
+.reviews__toggle {
+  width: 25px;
+  height: 25px;
+  margin: 0 7%;
+  border: 1px solid #000000;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+.reviews__toggle:hover {
+  border-color: #826550;
+}
+.reviews__item {
+  display: none;
+}
+input[type="radio"]:nth-of-type(1):checked ~ .reviews__toggles .reviews__toggle:nth-of-type(1),
+input[type="radio"]:nth-of-type(2):checked ~ .reviews__toggles .reviews__toggle:nth-of-type(2),
+input[type="radio"]:nth-of-type(3):checked ~ .reviews__toggles .reviews__toggle:nth-of-type(3) {
+  background: #353535;
+}
+input[type="radio"]:nth-of-type(1):checked ~ .reviews__items .reviews__item:nth-of-type(1),
+input[type="radio"]:nth-of-type(2):checked ~ .reviews__items .reviews__item:nth-of-type(2),
+input[type="radio"]:nth-of-type(3):checked ~ .reviews__items .reviews__item:nth-of-type(3) {
+  display: block;
+}
+@media (min-width: 768px) {
+  .reviews__wrapper {
+    position: relative;
+    padding: 60px 0;
+  }
+  .reviews__title {
+    text-align: left;
+    font-size: 40px;
+  }
   .reviews__write {
-    display: none;
+    display: block;
+    position: absolute;
+    top: 60px;
+    right: 0;
+  }
+  .reviews__items {
+    margin-left: 0;
+    padding-left: 70px;
+    border: 1px solid #e5ddd5;
+  }
+  .reviews__autor-foto {
+    left: -110px;
+    width: 80px;
+    height: 80px;
+    border-color: transparent;
+    border-radius: 50%;
+  }
+  .reviews__toggles {
+    margin: 0 auto;
+    text-align: center;
+    width: 300px;
+    height: 40px;
+    margin-top: -12px;
+    background-color: #f9f5f2;
   }
   .reviews__toggle {
-    width: 25px;
-    height: 25px;
-    margin: 0 7%;
-    border: 1px solid #000000;
-    transform: rotate(45deg);
-    cursor: pointer;
+    margin: 0 30px;
   }
-  .reviews__toggle:hover {
-    border-color: #826550;
+}
+@media (min-width: 1200px) {
+  .reviews__toggles {
+    margin-top: 30px;
+    width: 100%;
+  }
+  .reviews__items {
+    min-height: 160px;
   }
   .reviews__item {
-    display: none;
+    padding-left: 150px;
   }
-  input[type="radio"]:nth-of-type(1):checked ~ .reviews__toggles .reviews__toggle:nth-of-type(1),
-  input[type="radio"]:nth-of-type(2):checked ~ .reviews__toggles .reviews__toggle:nth-of-type(2),
-  input[type="radio"]:nth-of-type(3):checked ~ .reviews__toggles .reviews__toggle:nth-of-type(3) {
-    background: #353535;
-  }
-  input[type="radio"]:nth-of-type(1):checked ~ .reviews__items .reviews__item:nth-of-type(1),
-  input[type="radio"]:nth-of-type(2):checked ~ .reviews__items .reviews__item:nth-of-type(2),
-  input[type="radio"]:nth-of-type(3):checked ~ .reviews__items .reviews__item:nth-of-type(3) {
-    display: block;
+  .reviews__autor-foto {
+    left: -142px;
+    top: -17px;
+    width: 250px;
+    height: 160px;
+    border: none;
+    border-radius: 0;
+    border-top-right-radius: 40px 50%;
+    border-bottom-right-radius: 40px 50%;
+    border-color: transparent;
   }
 }
 /*# sourceMappingURL=style.css.map */
