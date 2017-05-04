@@ -40,6 +40,22 @@
     margin-left: 70px;
 
     
+    &:hover .news__date {
+      background: @base-color-nav;
+
+      &::after{
+        bordercolor: transparent;
+        border-top-color: @base-color-nav;
+      }
+    }
+
+
+    &:hover p {
+      color: @base-color-nav;
+      text-decoration: underline;
+    }    
+
+    
     &:first-child {
       border-bottom: 1px solid #E4DDD7;
     }
@@ -71,6 +87,7 @@
     line-height: 1;
     color: #FFFFFF;
     background: #000000;
+    
 
     &::after {
       content: "";
@@ -86,10 +103,11 @@
       font-size: 30px;
       line-height: 1;
     }
-
-
   }
 }
+
+
+  
 
 
 @media @tabled-width {

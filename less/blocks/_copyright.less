@@ -1,0 +1,53 @@
+.copyright {
+  .container;
+  text-align: center;
+
+  &__title {
+    font-size: 18px;
+    line-height: 2;
+  }
+
+
+  &__link {
+    color: #ffffff;
+    border-color: #3e3e3e;
+  }
+}
+
+@media @tabled-width {
+  .copyright {
+    display: inline-block;
+    order: 1;
+    margin: 0;
+    width: 50%;
+    text-align: right;
+
+
+    &__title {
+      display: block;
+      margin-right: 30px;
+    }
+
+
+    &__link {
+      display: inline-block;
+    }
+  }
+}
+
+
+@media @desktop-width {
+  .copyright {
+    order: 2;
+    width: auto;
+    width: 33.33%;
+
+
+    &__title {
+    }
+
+
+    &__link {
+    }
+  }
+}

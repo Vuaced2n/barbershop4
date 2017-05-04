@@ -1,12 +1,10 @@
-@mobile-color-nav: #816550;
-
 .main-nav {
   position: relative;
   min-height: 51px;
-  background: @mobile-color-nav;
+  background: @base-color-nav;
   
   &__wrapper {
-    background: @mobile-color-nav;
+    background: @base-color-nav;
   }
 
 
@@ -23,15 +21,15 @@
     a {
       display: block;
       padding: 12px 0;
-      border-top: 1px solid lighten(@mobile-color-nav, 8%);
-      border-bottom: 1px solid darken(@mobile-color-nav, 8%);
+      border-top: 1px solid lighten(@base-color-nav, 8%);
+      border-bottom: 1px solid darken(@base-color-nav, 8%);
       font-size: 18px;
       line-height: 1.4;
       color: #ffffff;
       text-transform: uppercase;
 
       &[href]:hover {
-      background: darken(@mobile-color-nav, 8%)
+      background: darken(@base-color-nav, 8%)
       }
     }
   }
@@ -50,14 +48,14 @@
     display: block;
     padding: 12px 21px;
     padding-left: 49px;
-    border-top: 1px solid lighten(@mobile-color-nav, 8%);
-    border-bottom: 1px solid darken(@mobile-color-nav, 8%);
+    border-top: 1px solid lighten(@base-color-nav, 8%);
+    border-bottom: 1px solid darken(@base-color-nav, 8%);
     font-size: 18px;
     line-height: 1.4;
     color: #ffffff;
 
     &[href]:hover {
-      background: darken(@mobile-color-nav, 8%)
+      background: darken(@base-color-nav, 8%)
     }
 
     &::before {
@@ -93,10 +91,10 @@
       font-size: 0;
       border: none;
       cursor: pointer;
-      background: darken(@mobile-color-nav, 8%);
+      background: darken(@base-color-nav, 8%);
     
       &:hover {
-        background: darken(@mobile-color-nav, 13%);
+        background: darken(@base-color-nav, 13%);
       }
 
       &:active::before,
@@ -205,8 +203,8 @@
         border: none;
 
         &[href]:hover {
-          color: #000000;
-          background: #FFFFFF;
+          color: @base-color-nav;
+          background: none;
         }
       }
     }
@@ -218,11 +216,11 @@
         border: none;
 
         &[href]:hover {
-          color: #000000;
-          background: #FFFFFF;
+          color: @base-color-nav;
+          background: none;
 
           &::before {
-            background: url(../img/login-black.png) no-repeat;
+            background: url(../img/login-hover.png) no-repeat;
           }
         }        
       }
@@ -249,7 +247,7 @@
         right: 0px;
         left: 0px;
         height: 3px;
-        background: #806552;
+        background: @base-color-nav;
       }
     }
   }
@@ -262,6 +260,37 @@
     &__item {
       a {
         padding: 12px 21px;
+      }
+    }
+
+
+    &__items {
+      margin-right: 10%;
+
+      
+    }
+
+
+    &__item {
+      a {
+        &[href]:hover {
+          color: #000000;
+          background: #FFFFFF;
+        }  
+      }
+    }
+
+
+    &__user-items {
+      a {
+        &[href]:hover {
+          color: #000000;
+          background: #FFFFFF;
+
+          &::before {
+            background: url(../img/login-black.png) no-repeat;
+          }
+        }        
       }
     }
 
