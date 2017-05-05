@@ -2,22 +2,25 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="../css/style.css">
-  <title>Барбершоп Бородинский Адаптивный</title>
+  <title>Барбершоп «Бородинский»</title>
 </head>
-<body class="body">
+<body>
   <header class="page-header">
-     <h1 class="visually-hidden">Барбершоп «Бородинский» — истинно мужская классика</h1>
+    <h1 class="visually-hidden">Барбершоп «Бородинский» — истинно мужская классика</h1>
     <div class="page-header__logo">
-      <img src="../img/logotype-mobile.png" alt="Барбершоп Бородинский"  width="226" height="30">
+      <img src="img/logotype-mobile.png" alt="Барбершоп Бородинский"  width="226" height="30">
     </div>
-    <nav class="main-nav">
+    <nav class="main-nav  main-nav--closed">
+      <button class="main-nav__toggle">Открыть меню</button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__items">
           <li class="main-nav__item"><a href="#">Главная</a></li>
           <li class="main-nav__item"><a href="#">Наши работы</a></li>
-          <li class="main-nav__item"><a class="main-nav__item  main-nav__item--active">Записаться</a></li>
-          <li class="main-nav__item"><a href="#">Контакты</a></li> 
+          <li class="main-nav__item"><a href="#">Записаться</a></li>
+          <li class="main-nav__item  main-nav--active">Контакты</a></li> 
           <li class="main-nav__item"><a href="#">HTML Academy</a></li>
         </ul>
         <ul class="main-nav__user-items">
@@ -70,23 +73,26 @@
     </form>
   </main>
   <footer class="page-footer">
-    <div class="contacts">
-      <span class="contacts__title">Барбершоп «Бородинский»</span>
-      <p class="contacts__address">г. Санкт-Петербург, ул. Большая Конюшенная 19/8</p>
-      <a class="contacts__tel" href="tel:+79992223311"><span class="contacts__tel--hidden">Тел.:</span> +7 (999) 222-33-11</a>
-    </div>
-    <div class="social">
-      <span class="social__title">Давайте дружить!</span>
-      <div class="social__links">
-        <a class="social__link  social__link--vk" href="#">Вконтакте</a>
-        <a class="social__link  social__link--fb" href="#">Фейсбук</a>
-        <a class="social__link  social__link--inst" href="#">Инстаграм</a>
+    <div class="page-footer__wrapper">
+      <div class="contacts">
+        <span class="contacts__title">Барбершоп «Бородинский»</span>
+        <p class="contacts__address">г. Санкт-Петербург, ул. Большsая Конюшенная 19/8</p>
+        <a class="contacts__tel  btn  btn--gray" href="tel:+79992223311"><span class="contacts__tel--hidden">Тел.:</span> +7 (999) 222-33-11</a>
+      </div>
+      <div class="social">
+        <span class="social__title">Давайте дружить!</span>
+        <div class="social__links">
+          <a class="social__link  social__link--vk" href="#">Вконтакте</a>
+          <a class="social__link  social__link--fb" href="#">Фейсбук</a>
+          <a class="social__link  social__link--inst" href="#">Инстаграм</a>
+        </div>
+      </div>
+      <div class="copyright">
+        <span class="copyright__title">Разработано:</span>
+        <a class="copyright__link  btn  btn--gray" href="#">HTML Academy</a>
       </div>
     </div>
-    <div class="copyright">
-      <span class="copyright__title">Разработано:</span>
-      <a class="copyright__link" href="#">HTML Academy</a>
-    </div>
   </footer>
+  <script src="../js/popup.js"></script>
 </body>
 </html>

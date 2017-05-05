@@ -227,7 +227,14 @@ a {
   color: #000000;
 }
 .btn:hover {
-  border-color: #d5c9bd;
+  border-color: #d2c4b6;
+}
+.btn--gray {
+  color: #ffffff;
+  border-color: #3e3e3e;
+}
+.btn--gray:hover {
+  border-color: #585858;
 }
 .page-header {
   display: flex;
@@ -753,7 +760,7 @@ a {
   text-decoration: underline;
 }
 .news__item:first-child {
-  border-bottom: 1px solid #E4DDD7;
+  border-bottom: 1px solid #e5ddd5;
 }
 .news__item:last-child {
   display: none;
@@ -998,11 +1005,6 @@ input[type="radio"]:nth-of-type(3):checked ~ .reviews__items .reviews__item:nth-
 .contacts__title {
   font-weight: 700;
 }
-.contacts__tel {
-  color: #ffffff;
-  border-color: #3e3e3e;
-  font-size: 18px;
-}
 .contacts__tel--hidden {
   display: none;
 }
@@ -1049,6 +1051,9 @@ input[type="radio"]:nth-of-type(3):checked ~ .reviews__items .reviews__item:nth-
   height: 100px;
   width: 33.33%;
   border: 1px solid #3e3e3e;
+}
+.social__link:hover {
+  border-color: #585858;
 }
 .social__link--vk {
   background: url(../img/vk-icon-big.png) no-repeat 50% 50%;
@@ -1105,12 +1110,9 @@ input[type="radio"]:nth-of-type(3):checked ~ .reviews__items .reviews__item:nth-
   text-align: center;
 }
 .copyright__title {
+  display: inline-block;
   font-size: 18px;
-  line-height: 2;
-}
-.copyright__link {
-  color: #ffffff;
-  border-color: #3e3e3e;
+  margin-bottom: 12px;
 }
 @media (min-width: 768px) {
   .copyright {
@@ -1134,5 +1136,69 @@ input[type="radio"]:nth-of-type(3):checked ~ .reviews__items .reviews__item:nth-
     width: auto;
     width: 33.33%;
   }
+}
+.feedback {
+  background: #f9f5f2;
+  color: #000000;
+}
+.feedback__wrapper {
+  width: 85%;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+.feedback__title {
+  margin-top: 0;
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.feedback__return {
+  display: none;
+}
+.feedback__items {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+}
+.feedback__item {
+  padding: 30px 15px;
+  padding-top: 175px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e5ddd5;
+  margin-bottom: 20px;
+}
+.feedback__item--work-of-month {
+  position: relative;
+  padding-top: 480px;
+}
+.feedback__label {
+  position: absolute;
+  padding: 15px 25px;
+  padding-right: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: #816550;
+}
+.feedback__label::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  right: -25px;
+  border: 25px solid green;
+  border-right: 10px solid transparent;
+}
+.feedback__autor-name {
+  font-size: 24px;
+  font-weight: 700;
+}
+.feedback__services {
+  text-transform: uppercase;
+}
+.feedback__service {
+  padding-left: 30px;
 }
 /*# sourceMappingURL=style.css.map */
