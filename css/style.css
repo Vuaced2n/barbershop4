@@ -1158,11 +1158,13 @@ input[type="radio"]:nth-of-type(3):checked ~ .reviews__items .reviews__item:nth-
 .feedback__items {
   display: flex;
   flex-direction: column;
+  align-items: center;
   font-size: 18px;
 }
 .feedback__item {
-  padding: 30px 15px;
-  padding-top: 175px;
+  width: 100%;
+  max-width: 480px;
+  min-height: 295px;
   display: flex;
   flex-direction: column;
   border: 1px solid #e5ddd5;
@@ -1170,26 +1172,40 @@ input[type="radio"]:nth-of-type(3):checked ~ .reviews__items .reviews__item:nth-
 }
 .feedback__item--work-of-month {
   position: relative;
-  padding-top: 480px;
 }
-.feedback__label {
+.feedback__img {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+.feedback__flag {
   position: absolute;
-  padding: 15px 25px;
-  padding-right: 10px;
+  top: 400px;
+  left: 0;
+  padding: 16px 20px;
   font-size: 20px;
   font-weight: 700;
+  line-height: 1;
   text-transform: uppercase;
   color: #ffffff;
   background: #816550;
 }
-.feedback__label::after {
+.feedback__flag::after {
   position: absolute;
   content: "";
   top: 0;
   bottom: 0;
-  right: -25px;
-  border: 25px solid green;
+  right: -17px;
+  border: 26px solid #816550;
   border-right: 10px solid transparent;
+}
+.feedback__inner-wrapper {
+  margin-top: -130px;
+  background: #f9f5f2;
+  padding: 20px 15px;
+}
+.feedback__item--work-of-month .feedback__inner-wrapper {
+  margin-top: 0;
 }
 .feedback__autor-name {
   font-size: 24px;
@@ -1199,6 +1215,20 @@ input[type="radio"]:nth-of-type(3):checked ~ .reviews__items .reviews__item:nth-
   text-transform: uppercase;
 }
 .feedback__service {
-  padding-left: 30px;
+  display: inline-block;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  padding-left: 40px;
+  background: url(../img/beard-icon.png) no-repeat;
+}
+.feedback__service--beard {
+  background-position: 0 0;
+}
+.feedback__service--haircut {
+  background-position: 0 -29px;
+}
+.feedback__service--mustache {
+  background-position: 0 -54px;
+  padding-left: 55px;
 }
 /*# sourceMappingURL=style.css.map */

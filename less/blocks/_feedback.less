@@ -4,7 +4,6 @@
   &__wrapper {
     .container;
     padding: 40px 0;
-    // text-align: center;
   }
 
 
@@ -22,64 +21,70 @@
 
 
   &__items {
+
     display: flex;
     flex-direction: column;
+    align-items: center;
     font-size: 18px;
   }
 
 
   &__item {
-    padding: 30px 15px;
-    padding-top: 175px;
+    width: 100%;
+    max-width: 480px;
+    min-height: 295px;
     display: flex;
     flex-direction: column;
-    // align-items: center;
     border: 1px solid @base-color-border;
     margin-bottom: 20px;
 
+
     &--work-of-month {
       position: relative;
-      padding-top: 480px;
     }
   }
 
 
-  // &__photo {
-  //   display: block;
-  //   width: 100%;
-  //   max-width: 290px;
-  //   height: 175px;
-  //   background: lighten(@base-color-bg, 10%);
-  // }
+  &__img {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+  }
 
 
-  // &__item--work-of-month &__photo {
-  //   height: 480px;
-  //   max-width: 480px;
-  // }
 
 
-  &__label {
+  &__flag {
     position: absolute;
-    padding: 15px 25px;
-    padding-right: 10px;
+    top: 400px;
+    left: 0;
+    padding: 16px 20px;
     font-size: 20px;
     font-weight: 700;
+    line-height: 1;
     text-transform: uppercase;
     color: #ffffff;
     background: @base-color-nav;
 
     &::after {
-
       position: absolute;
       content: "";
       top: 0;
       bottom: 0;
-      right: -25px;
-      border: 25px solid green;
+      right: -17px;
+      border: 26px solid @base-color-nav;
       border-right: 10px solid transparent;
-
     }
+  }
+
+
+  &__inner-wrapper {
+    margin-top: -130px;
+    background: @content-color-bg;
+    padding: 20px 15px;
+  }
+  &__item--work-of-month &__inner-wrapper {
+    margin-top: 0;
   }
 
 
@@ -95,6 +100,23 @@
 
 
   &__service {
-    padding-left: 30px;
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    padding-left: 40px;
+    background: url(../img/beard-icon.png) no-repeat;
+
+    &--beard {
+      background-position: 0 0;
+    }
+
+    &--haircut {
+      background-position: 0 -29px;
+    }
+
+    &--mustache {
+      background-position: 0 -54px;
+      padding-left: 55px;
+    }
   }
 }
