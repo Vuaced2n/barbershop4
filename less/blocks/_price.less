@@ -1,0 +1,81 @@
+.price {
+  background-color: lighten(@base-color-bg, 5%);
+  
+  &__wrapper {
+    .container;
+    padding: 40px 0;
+  }
+
+
+  &__title {
+    margin-top: 0;
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+
+  &__items {
+    width: 100%;
+    font-size: 20px;
+  }
+
+
+  &__name-service {
+    font-weight: 700;
+  }
+
+
+  
+
+  &__discount {
+    width: 100%;
+    text-align: center;
+    border: 1px solid lighten(#3e3e3e, 7%);
+
+    &:hover {
+        border-color: lighten(#3e3e3e, 17%);
+      }
+
+
+    p {
+      margin: 0;
+      display: inline-block;
+      padding: 20px;
+      padding-left: 100px;
+      font-size: 20px;   
+      background: url(../img/clock.png) no-repeat 20px 50%;
+      background-size: 58px;      
+    }
+  }
+}
+
+
+@media @mobile-width {
+  .price {
+    &__wrapper {
+      max-width: 400px;
+    }
+
+
+    &__number-service {
+      display: none;
+    }
+
+
+    &__name-service {
+      display: block;
+    }
+
+
+    &__wash-service {
+      display: block;
+      margin-bottom: 15px;
+    }
+
+
+    &__price-service {
+      vertical-align: top;
+    }
+  }
+}

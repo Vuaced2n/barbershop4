@@ -1,6 +1,7 @@
-.feedback {
+.works-photo {
   background: @content-color-bg;
   color: #000000;
+
   &__wrapper {
     .container;
     padding: 40px 0;
@@ -21,7 +22,6 @@
 
 
   &__items {
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -50,8 +50,6 @@
     justify-content: center;
     overflow: hidden;
   }
-
-
 
 
   &__flag {
@@ -117,6 +115,81 @@
     &--mustache {
       background-position: 0 -54px;
       padding-left: 55px;
+    }
+  }
+}
+
+
+@media @tabled-width {
+  .works-photo {
+
+    &__wrapper {
+      position: relative;
+      padding: 60px 0; 
+    }
+
+
+    &__title {
+      text-align: left;
+      font-size: 40px;
+    }
+
+
+    &__return {
+      position: absolute;
+      top: 60px;
+      right: 0;
+      display: inline-block;
+    }
+
+
+    &__item {
+      max-width: none;
+      min-height: none;
+      flex-direction: row;
+    }
+
+
+    &__img {
+      display: inline-flex;
+      justify-content: flex-end;
+      width: 270px;
+      min-width: 270px;      
+    }
+    &__item--work-of-month &__img {
+      width: 480px; 
+    }
+
+
+
+    &__flag {
+      top: 35px;
+      left: -3px;
+    }
+
+
+    &__inner-wrapper {
+      display: inline-flex;
+      flex-direction: column;
+      margin-top: 0;
+      padding: 45px;
+    }
+  }
+}
+
+
+@media @desktop-width {
+  .works-photo {
+
+    &__img {
+      display: inline-flex;
+      justify-content: flex-start;
+      width: auto;
+      min-width: none;
+      overflow: visible;     
+    }
+    &__item--work-of-month &__img {
+      min-width: 480px; 
     }
   }
 }

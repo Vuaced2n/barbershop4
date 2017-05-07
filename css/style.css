@@ -239,8 +239,7 @@ a {
 .page-header {
   display: flex;
   flex-direction: column;
-  background: #000000 url(../img/body-bg.jpg) no-repeat 0 -70px;
-  background-size: cover;
+  background: #353535;
 }
 .page-header__logo {
   padding: 20px 0;
@@ -249,6 +248,8 @@ a {
 @media (min-width: 768px) {
   .page-header {
     flex-direction: column-reverse;
+    background: url(../img/body-bg.jpg) no-repeat 0 -70px;
+    background-size: cover;
   }
   .page-header__logo {
     min-height: 400px;
@@ -1137,31 +1138,31 @@ input[type="radio"]:nth-of-type(3):checked ~ .reviews__items .reviews__item:nth-
     width: 33.33%;
   }
 }
-.feedback {
+.works-photo {
   background: #f9f5f2;
   color: #000000;
 }
-.feedback__wrapper {
+.works-photo__wrapper {
   width: 85%;
   margin: 0 auto;
   padding: 40px 0;
 }
-.feedback__title {
+.works-photo__title {
   margin-top: 0;
   font-size: 30px;
   text-align: center;
   text-transform: uppercase;
 }
-.feedback__return {
+.works-photo__return {
   display: none;
 }
-.feedback__items {
+.works-photo__items {
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 18px;
 }
-.feedback__item {
+.works-photo__item {
   width: 100%;
   max-width: 480px;
   min-height: 295px;
@@ -1170,15 +1171,15 @@ input[type="radio"]:nth-of-type(3):checked ~ .reviews__items .reviews__item:nth-
   border: 1px solid #e5ddd5;
   margin-bottom: 20px;
 }
-.feedback__item--work-of-month {
+.works-photo__item--work-of-month {
   position: relative;
 }
-.feedback__img {
+.works-photo__img {
   display: flex;
   justify-content: center;
   overflow: hidden;
 }
-.feedback__flag {
+.works-photo__flag {
   position: absolute;
   top: 400px;
   left: 0;
@@ -1190,7 +1191,7 @@ input[type="radio"]:nth-of-type(3):checked ~ .reviews__items .reviews__item:nth-
   color: #ffffff;
   background: #816550;
 }
-.feedback__flag::after {
+.works-photo__flag::after {
   position: absolute;
   content: "";
   top: 0;
@@ -1199,36 +1200,144 @@ input[type="radio"]:nth-of-type(3):checked ~ .reviews__items .reviews__item:nth-
   border: 26px solid #816550;
   border-right: 10px solid transparent;
 }
-.feedback__inner-wrapper {
+.works-photo__inner-wrapper {
   margin-top: -130px;
   background: #f9f5f2;
   padding: 20px 15px;
 }
-.feedback__item--work-of-month .feedback__inner-wrapper {
+.works-photo__item--work-of-month .works-photo__inner-wrapper {
   margin-top: 0;
 }
-.feedback__autor-name {
+.works-photo__autor-name {
   font-size: 24px;
   font-weight: 700;
 }
-.feedback__services {
+.works-photo__services {
   text-transform: uppercase;
 }
-.feedback__service {
+.works-photo__service {
   display: inline-block;
   margin-bottom: 10px;
   margin-right: 10px;
   padding-left: 40px;
   background: url(../img/beard-icon.png) no-repeat;
 }
-.feedback__service--beard {
+.works-photo__service--beard {
   background-position: 0 0;
 }
-.feedback__service--haircut {
+.works-photo__service--haircut {
   background-position: 0 -29px;
 }
-.feedback__service--mustache {
+.works-photo__service--mustache {
   background-position: 0 -54px;
   padding-left: 55px;
+}
+@media (min-width: 768px) {
+  .works-photo__wrapper {
+    position: relative;
+    padding: 60px 0;
+  }
+  .works-photo__title {
+    text-align: left;
+    font-size: 40px;
+  }
+  .works-photo__return {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    display: inline-block;
+  }
+  .works-photo__item {
+    max-width: none;
+    min-height: none;
+    flex-direction: row;
+  }
+  .works-photo__img {
+    display: inline-flex;
+    justify-content: flex-end;
+    width: 270px;
+    min-width: 270px;
+  }
+  .works-photo__item--work-of-month .works-photo__img {
+    width: 480px;
+  }
+  .works-photo__flag {
+    top: 35px;
+    left: -3px;
+  }
+  .works-photo__inner-wrapper {
+    display: inline-flex;
+    flex-direction: column;
+    margin-top: 0;
+    padding: 45px;
+  }
+}
+@media (min-width: 1200px) {
+  .works-photo__img {
+    display: inline-flex;
+    justify-content: flex-start;
+    width: auto;
+    min-width: none;
+    overflow: visible;
+  }
+  .works-photo__item--work-of-month .works-photo__img {
+    min-width: 480px;
+  }
+}
+.price {
+  background-color: #424242;
+}
+.price__wrapper {
+  width: 85%;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+.price__title {
+  margin-top: 0;
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.price__items {
+  width: 100%;
+  font-size: 20px;
+}
+.price__name-service {
+  font-weight: 700;
+}
+.price__discount {
+  width: 100%;
+  text-align: center;
+  border: 1px solid #505050;
+}
+.price__discount:hover {
+  border-color: #696969;
+}
+.price__discount p {
+  margin: 0;
+  display: inline-block;
+  padding: 20px;
+  padding-left: 100px;
+  font-size: 20px;
+  background: url(../img/clock.png) no-repeat 20px 50%;
+  background-size: 58px;
+}
+@media (max-width: 767px) {
+  .price__wrapper {
+    max-width: 400px;
+  }
+  .price__number-service {
+    display: none;
+  }
+  .price__name-service {
+    display: block;
+  }
+  .price__wash-service {
+    display: block;
+    margin-bottom: 15px;
+  }
+  .price__price-service {
+    vertical-align: top;
+  }
 }
 /*# sourceMappingURL=style.css.map */
