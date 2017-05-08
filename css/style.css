@@ -1218,15 +1218,16 @@ input[type="radio"]:nth-of-type(3):checked ~ .reviews__items .reviews__item:nth-
 .works-photo__service {
   display: inline-block;
   margin-bottom: 10px;
-  margin-right: 10px;
-  padding-left: 40px;
+  margin-right: 12px;
   background: url(../img/beard-icon.png) no-repeat;
 }
 .works-photo__service--beard {
-  background-position: 0 0;
+  background-position: -9px 0;
+  padding-left: 35px;
 }
 .works-photo__service--haircut {
-  background-position: 0 -29px;
+  background-position: -10px -29px;
+  padding-left: 32px;
 }
 .works-photo__service--mustache {
   background-position: 0 -54px;
@@ -1247,6 +1248,10 @@ input[type="radio"]:nth-of-type(3):checked ~ .reviews__items .reviews__item:nth-
     right: 0;
     display: inline-block;
   }
+  .works-photo__flag {
+    top: 35px;
+    left: -3px;
+  }
   .works-photo__item {
     max-width: none;
     min-height: none;
@@ -1261,27 +1266,69 @@ input[type="radio"]:nth-of-type(3):checked ~ .reviews__items .reviews__item:nth-
   .works-photo__item--work-of-month .works-photo__img {
     width: 480px;
   }
-  .works-photo__flag {
-    top: 35px;
-    left: -3px;
-  }
   .works-photo__inner-wrapper {
     display: inline-flex;
     flex-direction: column;
     margin-top: 0;
     padding: 45px;
   }
+  .works-photo__quote {
+    margin-bottom: auto;
+  }
 }
 @media (min-width: 1200px) {
+  .works-photo__flag {
+    top: 30px;
+    left: auto;
+    right: 0;
+  }
+  .works-photo__flag::after {
+    top: 0;
+    bottom: 0;
+    right: auto;
+    left: -17px;
+    border: 26px solid #816550;
+    border-left: 10px solid transparent;
+  }
+  .works-photo__items {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+  .works-photo__item {
+    width: 31%;
+    display: flex;
+    flex-direction: column;
+  }
+  .works-photo__item--work-of-month {
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 40px;
+  }
   .works-photo__img {
     display: inline-flex;
-    justify-content: flex-start;
+    justify-content: center;
     width: auto;
     min-width: none;
     overflow: visible;
   }
   .works-photo__item--work-of-month .works-photo__img {
     min-width: 480px;
+  }
+  .works-photo__inner-wrapper {
+    display: inline-flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-top: 0;
+    padding: 30px;
+    padding-bottom: 20px;
+  }
+  .works-photo__item--work-of-month .works-photo__autor-name {
+    margin-top: 130px;
+  }
+  .works-photo__services {
+    margin-top: 20px;
   }
 }
 .price {
@@ -1310,9 +1357,6 @@ input[type="radio"]:nth-of-type(3):checked ~ .reviews__items .reviews__item:nth-
   text-align: center;
   border: 1px solid #505050;
 }
-.price__discount:hover {
-  border-color: #696969;
-}
 .price__discount p {
   margin: 0;
   display: inline-block;
@@ -1338,6 +1382,49 @@ input[type="radio"]:nth-of-type(3):checked ~ .reviews__items .reviews__item:nth-
   }
   .price__price-service {
     vertical-align: top;
+  }
+}
+@media (min-width: 768px) {
+  .price__title {
+    font-size: 40px;
+    text-align: left;
+  }
+  .price__items {
+    margin-bottom: 10px;
+    border-collapse: collapse;
+  }
+  .price__number-service {
+    padding: 15px 25px;
+    text-align: center;
+    color: #717171;
+    border: 1px solid #505050;
+  }
+  .price__name-service {
+    padding: 15px;
+    border: 1px solid #505050;
+  }
+  .price__wash-service {
+    padding: 15px;
+    border: 1px solid #505050;
+  }
+  .price__price-service {
+    padding: 15px;
+    border: 1px solid #505050;
+  }
+  .price__discount p {
+    padding: 40px 0;
+    padding-left: 100px;
+    width: 550px;
+    font-size: 30px;
+    text-transform: uppercase;
+    background: url(../img/clock.png) no-repeat 55px 50%;
+    background-size: 70px;
+  }
+  .price__discount p br {
+    display: none;
+  }
+  .price--hidden {
+    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */
