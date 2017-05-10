@@ -9,10 +9,13 @@
   font-weight: 700;
   color: #000000;
   background-color: transparent;
+  cursor: pointer;
+
 
   &:hover {
     border-color: darken(#e5ddd5, 10%);
   }
+
 
   &--gray {
     color: #ffffff;
@@ -20,6 +23,16 @@
 
     &:hover {
       border-color: lighten(#3e3e3e, 10%)
+    }
+  }
+
+
+  &--brown {
+    color: #ffffff;
+    background-color: @base-color-nav;
+
+    &:hover {
+      background-color: darken(@base-color-nav, 8%);
     }
   }
 }
