@@ -16,8 +16,8 @@
   }
 
 
-  input[type="radio"]:nth-of-type(1):checked ~ &:nth-of-type(1)::before,  input[type="radio"]:nth-of-type(2):checked ~ &:nth-of-type(2)::before,  input[type="radio"]:nth-of-type(3):checked ~ &:nth-of-type(3)::before,  input[type="radio"]:nth-of-type(4):checked ~ &:nth-of-type(4)::before,  input[type="radio"]:nth-of-type(5):checked ~ &:nth-of-type(5)::before,  input[type="radio"]:nth-of-type(6):checked ~ &:nth-of-type(6)::before,  input[type="radio"]:nth-of-type(7):checked ~ &:nth-of-type(7)::before,  input[type="radio"]:nth-of-type(8):checked ~ &:nth-of-type(8)::before,  input[type="radio"]:nth-of-type(9):checked ~ &:nth-of-type(9)::before {
-    box-shadow: 
+  input[type="radio"]:checked + &::before {
+    box-shadow:
       inset 0 0 0 15px #ffffff,
       inset 0 0 0 16px @base-color-border;
   }

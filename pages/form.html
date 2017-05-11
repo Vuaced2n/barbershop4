@@ -11,7 +11,7 @@
   <header class="page-header">
     <h1 class="visually-hidden">Барбершоп «Бородинский» — истинно мужская классика</h1>
     <div class="page-header__logo">
-      <img src="../img/logotype-mobile.png" alt="Барбершоп Бородинский"  width="226" height="30">
+      <img src="../img/logo.svg" alt="Барбершоп Бородинский">
     </div>
     <nav class="main-nav  main-nav--closed">
       <button class="main-nav__toggle">Открыть меню</button>
@@ -30,33 +30,53 @@
     </nav>
   </header>
   <main class="form">
+    <div class="form__wrapper">
       <h1 class="form__title">Запись на стрижку</h1>
       <a class="form__return  btn" href="../index.html">На главную</a>
-      <form class="form__wrapper" method="post" name="recording-for-haircut">
+      <form class="form__inner-wrapper" method="post" name="recording-for-haircut">
         <div class="form__text-fields">
           <input class="form__text  form__text--surname" type="text" name="surname" id="surname" placeholder="Фамилия">
           <input class="form__text  form__text--name" type="text" name="name" id="name" placeholder="Имя">
           <input class="form__text  form__text--patronymic" type="text" name="patronymic" id="patronymic" placeholder="Очество">
           <input class="form__text  form__text--tel" type="tel" name="tel" id="tel" placeholder="Контактный телефон">
           <input class="form__text  form__text--email" type="email" name="email" id="email" placeholder="Контактный e-mail">
-          <textarea class="form__text" rows="5" placeholder="Доп. информация для мастера">          
-          </textarea>
+          <textarea class="form__text" rows="5" placeholder="Доп. информация для мастера"></textarea>
         </div>
-        <fieldset>
+        <fieldset class="form__beard-models">
           <legend class="form__subtitle">Выберите модель бороды:</legend>
-          <div class="form__radio-buttons">
-            <input type="radio" name="beard-model" id="beard-model-1" checked>
-            <input type="radio" name="beard-model" id="beard-model-2">
-            <input type="radio" name="beard-model" id="beard-model-3">
-            <input type="radio" name="beard-model" id="beard-model-4">
-            <input type="radio" name="beard-model" id="beard-model-5">
+          <ul class="form__radio-buttons">
 
-            <label class="form__radio  radio-btn" for="beard-model-1">адмирал</label>
-            <label class="form__radio  radio-btn" for="beard-model-2">лесоруб</label>
-            <label class="form__radio  radio-btn" for="beard-model-3">полярник</label>
-            <label class="form__radio  radio-btn" for="beard-model-4">боярин</label>
-            <label class="form__radio  radio-btn" for="beard-model-5">мудрец</label>
-          </div>
+            <li class="form__beard-model">
+              <input type="radio" name="beard-model" id="beard-model-1" checked>
+              <label class="form__radio  radio-btn" for="beard-model-1">адмирал</label>
+              <img src="../img/beard-model-1.svg">
+            </li>
+
+            <li class="form__beard-model">
+              <input type="radio" name="beard-model" id="beard-model-2">
+              <label class="form__radio  radio-btn" for="beard-model-2">лесоруб</label>
+              <img src="../img/beard-model-2.svg">
+            </li>
+
+            <li class="form__beard-model">
+              <input type="radio" name="beard-model" id="beard-model-3">
+              <label class="form__radio  radio-btn" for="beard-model-3">полярник</label>
+              <img src="../img/beard-model-3.svg">
+            </li>
+
+            <li class="form__beard-model">
+              <input type="radio" name="beard-model" id="beard-model-4">
+              <label class="form__radio  radio-btn" for="beard-model-4">боярин</label>
+              <img src="../img/beard-model-4.svg">
+            </li>
+
+            <li class="form__beard-model">
+              <input type="radio" name="beard-model" id="beard-model-5">
+              <label class="form__radio  radio-btn" for="beard-model-5">мудрец</label>
+              <img src="../img/beard-model-4.svg">
+            </li>
+
+          </ul>
         </fieldset>
         <fieldset>
           <legend class="form__subtitle">Дополнительные услуги:</legend>
@@ -76,6 +96,7 @@
         </fieldset>
         <button class="form__submit  btn  btn--brown" type="submit">Отправить заявку</button>
       </form>
+    </div>
   </main>
   <footer class="page-footer">
     <div class="page-footer__wrapper">
