@@ -5,6 +5,7 @@
   &__wrapper {
     .container();
     padding: 40px 0;
+    padding-top: 70px;
     border-bottom: 1px solid @base-color-border;
   }
 
@@ -104,7 +105,7 @@
 @media @tabled-width {
   .news {
     &__wrapper {
-      padding: 60px 0;
+      padding: 75px 0;
       position: relative;
     }
 
@@ -112,6 +113,13 @@
     &__title {
       text-align: left;
       font-size: 40px;
+    }
+
+
+    &__to-all {
+      position: absolute;
+      top: 75px;
+      right: 0;
     }
 
 
@@ -127,22 +135,23 @@
         border-bottom: none;
       }
     }
-
-
-    &__to-all {
-      position: absolute;
-      top: 60px;
-      right: 0;
-    }
   }
 }
 
 
 @media @desktop-width {
   .news {
+    &__wrapper {
+      padding-top: 100px;
+    }
     
     &__title {
       margin-left: 70px;
+    }
+
+
+    &__to-all {
+      top: 100px;
     }
 
 
