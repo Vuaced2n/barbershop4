@@ -9,6 +9,7 @@
     height: 40px;
     width: 100%;
     background: url(../img/corner-light.svg) no-repeat;
+    background-size: 100% 40px;
   }
 
 
@@ -43,7 +44,7 @@
   &__item {
     width: 100%;
     max-width: 480px;
-    min-height: 295px;
+    min-height: 294px;
     display: flex;
     flex-direction: column;
     border: 1px solid @base-color-border;
@@ -52,6 +53,7 @@
 
     &--work-of-month {
       position: relative;
+      
     }
   }
 
@@ -60,6 +62,10 @@
     display: flex;
     justify-content: center;
     overflow: hidden;
+
+    &--work-of-month {
+      min-height: 480px;
+    }
   }
 
 
@@ -143,6 +149,7 @@
       height: 40px;
       width: 100%;
       background: url(../img/corner-white.svg) no-repeat;
+      background-size: 100% 40px;
     }
 
 
@@ -156,6 +163,7 @@
     &__title {
       text-align: left;
       font-size: 40px;
+      margin-bottom: 40px;
     }
 
 
@@ -182,12 +190,16 @@
 
     &__img {
       display: inline-flex;
+      display: -moz-inline-box;
       justify-content: flex-end;
       width: 270px;
-      min-width: 270px;      
-    }
-    &__item--work-of-month &__img {
-      width: 480px; 
+      height: 294px;
+      min-width: 270px;
+
+      &--work-of-month{
+        width: 480px;
+        height: 480px;
+      }   
     }
 
 
@@ -209,10 +221,31 @@
 @media @desktop-width {
   .works-photo {
     
+    &::before {
+      height: 65px;
+      background-size: 100% 65px;
+    }
+
+
     &::after {
       display: none;
     }
     
+
+    &__wrapper {
+      padding-top: 60px;
+    }
+
+    
+    &__title {
+      margin-bottom: 60px;
+    }
+
+
+    &__return {
+      top: 60px;
+    }
+
 
     &__flag {
       top: 30px;
