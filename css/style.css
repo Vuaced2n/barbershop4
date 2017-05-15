@@ -318,11 +318,11 @@ input[type="checkbox"]:nth-of-type(9):checked ~ .checkbox:nth-of-type(9)::before
 }
 .page-header__logo {
   position: relative;
-  padding: 10px 0;
+  padding: 25px 0;
   text-align: center;
 }
 .page-header__logo img {
-  width: 300px;
+  width: 226px;
 }
 @media (min-width: 768px) {
   .page-header {
@@ -334,11 +334,14 @@ input[type="checkbox"]:nth-of-type(9):checked ~ .checkbox:nth-of-type(9)::before
     background-size: cover;
   }
   .page-header__logo {
-    padding: 20px 0;
+    padding: 40px 0 70px 0;
     min-height: 400px;
   }
   .page-header__logo img {
     width: auto;
+  }
+  .page-header__logo--inner-page {
+    min-height: 0;
   }
 }
 @media (min-width: 1200px) {
@@ -346,7 +349,11 @@ input[type="checkbox"]:nth-of-type(9):checked ~ .checkbox:nth-of-type(9)::before
     height: 65px;
   }
   .page-header__logo {
-    min-height: 500px;
+    min-height: 650px;
+    padding: 50px 0 95px 0;
+  }
+  .page-header__logo--inner-page {
+    min-height: 0;
   }
 }
 .main-nav {
