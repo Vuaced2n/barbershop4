@@ -325,8 +325,8 @@ input[type="checkbox"]:nth-of-type(9):checked ~ .checkbox:nth-of-type(9)::before
   padding: 30px 50px;
   color: #000000;
   background: #f9f5f2;
-  -webkit-box-shadow: 0 0 40px 1px #999999;
-          box-shadow: 0 0 40px 1px #999999;
+  -webkit-box-shadow: 0 0 40px 3px;
+          box-shadow: 0 0 40px 3px;
   z-index: 30;
 }
 .pop-up__title {
@@ -337,6 +337,7 @@ input[type="checkbox"]:nth-of-type(9):checked ~ .checkbox:nth-of-type(9)::before
 @media (min-width: 768px) {
   .pop-up {
     width: 460px;
+    margin-left: -230px;
   }
   .pop-up__title {
     font-size: 40px;
