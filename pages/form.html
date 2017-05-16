@@ -11,12 +11,14 @@
   <header class="page-header">
     <h1 class="visually-hidden">Барбершоп «Бородинский» — истинно мужская классика</h1>
     <div class="page-header__logo  page-header__logo--inner-page">
-      <picture>
-        <source srcset="../img/logo.svg" media="(min-width: 1200px)">
-        <source srcset="../img/logo-tabled.svg" media="(min-width: 768px) and (max-width: 1999px)">
-        <source srcset="../img/logo-mob.svg" media="(max-width: 767px)">
-        <img src="../img/logo.svg" alt="Барбершоп Бородинский">
-      </picture>
+      <a href="../index.html">
+        <picture>
+          <source srcset="../img/logo.svg" media="(min-width: 1200px)">
+          <source srcset="../img/logo-tabled.svg" media="(min-width: 768px) and (max-width: 1999px)">
+          <source srcset="../img/logo-mob.svg" media="(max-width: 767px)">
+          <img src="../img/logo.svg" alt="Барбершоп Бородинский">
+        </picture>
+      </a>
     </div>
     <nav class="main-nav  main-nav--closed">
       <button class="main-nav__toggle">Открыть меню</button>
@@ -102,6 +104,16 @@
         <button class="form__submit  btn  btn--brown  btn--width-100" type="submit">Отправить заявку</button>
       </form>
     </div>
+    <div class="form__submitted  pop-up">
+      <span class="pop-up__title">Это успех!</span>
+      <p>Ваша заявка отправлена. Ожидайте, мы свяжемся с вами как только будет минутка.</p>
+      <button class="form__submitted-close  btn  btn--brown  btn--width-100">ОК</button>
+    </div>
+    <div class="form__no-submitted  pop-up">
+      <span class="pop-up__title">Неудача</span>
+      <p>Что-то пошло не так. Проверьте выделенные красным поля формы.</p>
+      <button class="pop-up__close  btn  btn--brown  btn--width-100" type="button">Закрыть окно</button>
+    </div>
   </main>
   <footer class="page-footer">
     <div class="page-footer__wrapper">
@@ -125,6 +137,18 @@
       </div>
     </div>
   </footer>
+  <div class="login-form">
+    <div class="login-form__wrapper">
+      <span class="login-form__closed">Закрыть</span>
+      <h2 class="login-form__title">Личный кабинет</h2>
+      <span class="login-form__info" >Введите свой логин и пароль, чтобы войти</span>
+      <input class="login-form__login" type="text" name="user-login" placeholder="Логин">
+      <input class="login-form__password" type="password" name="user-passwors" placeholder="Пароль">
+      <input type="checkbox" name="remember-user" id="remember-user">
+      <label class="login-form__remember-user  checkbox" for="remember-user">Запомните меня</label>
+      <a class="login-form__restore-password" href="#">Я забыл пароль!</a>
+      <button class="btn  btn--brown  btn--width-100">Войти в личный кабинет</button>
+    </div>
   <script src="../js/popup.js"></script>
 </body>
 </html>

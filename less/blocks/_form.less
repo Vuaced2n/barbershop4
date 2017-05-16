@@ -127,6 +127,18 @@
     padding-left: 50px;
     margin-bottom: 30px;
   }
+
+
+  &__no-submitted {
+    display: none;
+  }
+  &__submitted {
+    display: none;
+
+    &--open {
+      display: inline-block;
+    }
+  }
 }
 
 
@@ -253,6 +265,12 @@
 
 @media @desktop-width {
   .form {
+
+    &::before {
+      height: 65px;
+      background-size: 100% 65px;
+    }
+
 
     &::after {
       display: none;

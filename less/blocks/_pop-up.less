@@ -1,0 +1,29 @@
+.pop-up {
+  position: fixed;
+  top: 84px;
+  left: 50%;
+  margin-left: -160px;
+  width: 320px;
+  text-align: center;
+  padding: 30px 50px;
+  color: #000000;
+  background: @content-color-bg;
+  box-shadow: 0 0 40px 1px #999999;
+  z-index: 30;
+
+  &__title {
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}
+
+
+@media @tabled-width {
+  .pop-up {
+    width: 460px;
+    &__title {
+      font-size: 40px;
+    }
+  }
+}
