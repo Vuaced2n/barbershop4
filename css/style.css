@@ -28,8 +28,7 @@ figure {
   margin: 1em 40px;
 }
 hr {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   height: 0;
   overflow: visible;
 }
@@ -144,8 +143,7 @@ fieldset {
   padding: 0.35em 0.625em 0.75em;
 }
 legend {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   color: inherit;
   display: table;
   max-width: 100%;
@@ -161,8 +159,7 @@ textarea {
 }
 [type="checkbox"],
 [type="radio"] {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding: 0;
 }
 [type="number"]::-webkit-inner-spin-button,
@@ -214,8 +211,7 @@ body {
   font-size: 18px;
 }
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 a {
   color: #ffffff;
@@ -246,8 +242,7 @@ fieldset {
   background-color: #ffffff;
 }
 input[type="radio"]:checked + .radio-btn::before {
-  -webkit-box-shadow: inset 0 0 0 15px #ffffff, inset 0 0 0 16px #e5ddd5;
-          box-shadow: inset 0 0 0 15px #ffffff, inset 0 0 0 16px #e5ddd5;
+  box-shadow: inset 0 0 0 15px #ffffff, inset 0 0 0 16px #e5ddd5;
 }
 .checkbox {
   position: relative;
@@ -325,8 +320,7 @@ input[type="checkbox"]:nth-of-type(9):checked ~ .checkbox:nth-of-type(9)::before
   padding: 30px 50px;
   color: #000000;
   background: #f9f5f2;
-  -webkit-box-shadow: 0 0 40px 3px;
-          box-shadow: 0 0 40px 3px;
+  box-shadow: 0 0 40px 3px;
   z-index: 30;
 }
 .pop-up__title {
@@ -370,8 +364,7 @@ input[type="checkbox"]:nth-of-type(9):checked ~ .checkbox:nth-of-type(9)::before
   text-align: center;
   color: #000000;
   background: #f9f5f2;
-  -webkit-box-shadow: 0 0 40px 4px;
-          box-shadow: 0 0 40px 4px;
+  box-shadow: 0 0 40px 4px;
 }
 .login-form__title {
   width: 100%;
@@ -618,9 +611,7 @@ input[type="checkbox"]:nth-of-type(9):checked ~ .checkbox:nth-of-type(9)::before
     width: 36px;
     height: 2px;
     background: #fff;
-    -webkit-box-shadow: 0 8px 0 0 #fff,
-                    0 16px 0 0 #fff;
-            box-shadow: 0 8px 0 0 #fff,
+    box-shadow: 0 8px 0 0 #fff,
                     0 16px 0 0 #fff;
   }
   .main-nav--closed .main-nav__item,
