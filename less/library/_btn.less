@@ -1,0 +1,44 @@
+.btn {
+  display: block;
+  padding: 14px 20px;
+  border: 1px solid #e5ddd5;
+  font-family: "PT Sans Narrow", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 700;
+  color: #000000;
+  background-color: transparent;
+  cursor: pointer;
+
+
+  &:hover {
+    border-color: darken(#e5ddd5, 10%);
+  }
+
+
+  &--width-100 {
+    width: 100%;
+  }
+
+
+  &--gray {
+    color: #ffffff;
+    border-color: #3e3e3e;
+
+    &:hover {
+      border-color: lighten(#3e3e3e, 10%)
+    }
+  }
+
+
+  &--brown {
+    color: #ffffff;
+    background-color: @base-color-nav;
+    border: none;
+
+    &:hover {
+      background-color: darken(@base-color-nav, 8%);
+    }
+  }
+}

@@ -1,0 +1,57 @@
+.page-header {  
+  display: flex;
+  flex-direction: column;
+  background: @base-color-bg; 
+
+  &__logo {
+    position: relative;
+    padding: 25px 0;
+    text-align: center;
+
+    img {
+      width: 226px;
+    }
+  }
+}
+
+
+@media @tabled-width {
+  .page-header {
+    flex-direction: column-reverse;
+    background: url(../img/body-bg.jpg) no-repeat 0 0;
+    background-size: cover;
+
+
+    &__logo {
+      padding: 40px 0 70px 0;
+      min-height: 400px;
+      
+      img {
+        width: auto;
+      }
+
+      &--inner-page {
+        min-height: 0;
+      }
+    }
+  }
+}
+
+
+@media @desktop-width {
+  .page-header {
+
+    &::after {
+      height: 65px;
+    }
+
+    &__logo {
+      min-height: 650px;
+      padding: 50px 0 95px 0;
+
+      &--inner-page {
+        min-height: 0;
+      }
+    }
+  }
+}
